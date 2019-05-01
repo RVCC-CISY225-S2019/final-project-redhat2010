@@ -41,6 +41,65 @@ h1 {
     margin-right: 0.25rem;
 }
 
+.anim-holder {
+    height: 10rem;
+}
+
+@keyframes anim1 {
+    0% {
+        left: 0%;
+        top: 0rem;
+        width: 20%;
+        background-color: red;
+        border-radius: 3px;
+    }
+
+    25% {
+        left: 80%;
+        top: 0rem;
+        width: 20%;
+        background-color: green;
+        border-radius: 60px;
+    }
+
+    50% {
+        left: 40%;
+        top: 0rem;
+        width: 20%;
+        background-color: purple;
+        border-radius: 60px;
+    }
+
+    75% {
+        left: 35%;
+        top: 4rem;
+        width: 30%;
+        background-color: blue;
+        border-radius: 60px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        left: 0%;
+        top: 0rem;
+        width: 20%;
+        background-color: red;
+        border-radius: 3px;
+        transform: rotate(360deg);
+    }
+}
+
+.anim {
+    width: 20%;
+    height: 5rem;
+    position: relative;
+    border-color: black;
+    border-style: solid;
+    animation-name: anim1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
 legend {
     font-family: inherit;
     font-size: 130%;
@@ -236,7 +295,10 @@ main {
 
 @media screen and (min-width: 48rem) {
 
-
+    .anim-holder {
+        width: 25rem;
+    }
+    
     .pic1 {
         grid-template-columns: 1.25fr 0.25fr 1fr;
         grid-template-areas:
@@ -265,6 +327,10 @@ main {
 /* wide screen layout >=64rem (1024px) */
 
 @media screen and (min-width: 64rem) {
+
+    .anim-holder {
+        width: 25rem;
+    }
 
     .pic1 {
         grid-template-columns: 1fr;
